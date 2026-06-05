@@ -697,31 +697,48 @@
     align-items:start;
   }
   .comfort-list{
-    columns:2;
-    column-gap:2rem;
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:.7rem;
     list-style:none;
     background:#fff;
     border:1px solid var(--line);
     border-radius:var(--r);
-    padding:1.4rem;
+    padding:1rem;
     box-shadow:0 20px 46px -38px rgba(4,42,68,.48);
   }
   .comfort-list li{
-    break-inside:avoid;
-    padding:.58rem 0 .58rem 1.05rem;
-    border-bottom:1px solid rgba(216,226,222,.72);
-    color:var(--ink-soft);
-    position:relative;
+    min-height:62px;
+    display:flex;
+    align-items:center;
+    gap:.72rem;
+    padding:.76rem .82rem;
+    border:1px solid rgba(204,224,234,.78);
+    border-radius:6px;
+    background:linear-gradient(180deg,#fff,var(--paper));
+    color:var(--ink);
+    font-size:.95rem;
+    font-weight:600;
+    line-height:1.25;
   }
-  .comfort-list li::before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:1.16rem;
-    width:5px;
-    height:5px;
-    border-radius:50%;
-    background:var(--ocean);
+  .amenity-icon{
+    flex:0 0 36px;
+    width:36px;
+    height:36px;
+    display:grid;
+    place-items:center;
+    border-radius:6px;
+    background:rgba(127,175,193,.14);
+    color:var(--ocean);
+  }
+  .amenity-icon svg{
+    width:21px;
+    height:21px;
+    stroke:currentColor;
+    stroke-width:1.9;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    fill:none;
   }
   .service-note{
     margin-top:1.4rem;
@@ -1150,25 +1167,25 @@
           <p class="service-note">Contact us for a complete list of amenities.</p>
         </div>
         <ul class="comfort-list reveal" style="--delay:.1s">
-          <li>Hairdryers</li>
-          <li>Towels</li>
-          <li>Bubble bath</li>
-          <li>Breakfast trays for breakfast in bed</li>
-          <li>Closet hangers</li>
-          <li>Alarm clocks</li>
-          <li>Bedroom robes</li>
-          <li>Cooking utensils, glassware and cutlery</li>
-          <li>Cooking spices</li>
-          <li>Microwave</li>
-          <li>Kettle</li>
-          <li>Toaster</li>
-          <li>Coffee grinder</li>
-          <li>Dish towels</li>
-          <li>Fireplace</li>
-          <li>Stereo, DVD, Cable TV</li>
-          <li>Private telephone line</li>
-          <li>Internet</li>
-          <li>Washer, dryer and ironing board</li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 13h14v3a5 5 0 0 1-5 5H9a4 4 0 0 1-4-4v-4Z"/><path d="M8 13V8a4 4 0 0 1 8 0v5"/><path d="M10 8h4"/></svg></span><span>Hairdryers</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4h10v16H7z"/><path d="M9 7h6"/><path d="M9 11h6"/></svg></span><span>Towels</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14v3a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5v-3Z"/><path d="M8 12V8a4 4 0 0 1 8 0"/><path d="M9 6h.01M13 4h.01M16 7h.01"/></svg></span><span>Bubble bath</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 10h16"/><path d="M6 10l2 10h8l2-10"/><path d="M9 10V7a3 3 0 0 1 6 0v3"/><path d="M10 14h4"/></svg></span><span>Breakfast trays for breakfast in bed</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 7a2 2 0 1 0-2-2"/><path d="M12 7v3"/><path d="M5 19l7-9 7 9H5Z"/></svg></span><span>Closet hangers</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="7"/><path d="M12 9v4l3 2"/><path d="M5 4l3 3"/><path d="M19 4l-3 3"/></svg></span><span>Alarm clocks</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4h8l3 6-3 10H8L5 10l3-6Z"/><path d="M9 4l3 7 3-7"/><path d="M12 11v9"/></svg></span><span>Bedroom robes</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3v18"/><path d="M11 3v7a4 4 0 0 1-8 0V3"/><path d="M17 3v18"/><path d="M17 3c3 2 4 5 4 8h-4"/></svg></span><span>Cooking utensils, glassware and cutlery</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M7 8c2 1 3 2 5 0 2 2 3 1 5 0"/><path d="M6 14c2 1 4 1 6 0 2 1 4 1 6 0"/></svg></span><span>Cooking spices</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M7 9h10"/><circle cx="8" cy="15" r="1"/><circle cx="12" cy="15" r="1"/><circle cx="16" cy="15" r="1"/></svg></span><span>Microwave</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 10h9a4 4 0 0 1 0 8H9a5 5 0 0 1-5-5v-3h3Z"/><path d="M8 10V5"/><path d="M12 10V5"/><path d="M16 13h2"/></svg></span><span>Kettle</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 8h10l-1 11H8L7 8Z"/><path d="M9 8V5h6v3"/><path d="M9 13h6"/></svg></span><span>Toaster</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 8h8l1 12H7L8 8Z"/><path d="M10 8V4h4v4"/><path d="M9 13h6"/><path d="M9 17h6"/></svg></span><span>Coffee grinder</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4h8v16H8z"/><path d="M8 8h8"/><path d="M10 12h4"/></svg></span><span>Dish towels</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 20h8a5 5 0 0 0 2-9c-2-1-3-3-3-6-3 2-5 5-4 9-1-1-2-2-2-4-2 2-3 4-3 6a4 4 0 0 0 2 4Z"/></svg></span><span>Fireplace</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 18v2"/><path d="M16 18v2"/><circle cx="9" cy="12" r="2"/><path d="M14 11h3"/><path d="M14 14h3"/></svg></span><span>Stereo, DVD, Cable TV</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4h10v16H7z"/><path d="M10 18h4"/><path d="M9 7h6"/><path d="M9 10h6"/></svg></span><span>Private telephone line</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 10a11 11 0 0 1 14 0"/><path d="M8 13a6 6 0 0 1 8 0"/><path d="M11 16a2 2 0 0 1 2 0"/><circle cx="12" cy="19" r="1"/></svg></span><span>Internet</span></li>
+          <li><span class="amenity-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 7h6"/><circle cx="12" cy="15" r="3"/><path d="M9 15a3 3 0 0 1 6 0"/></svg></span><span>Washer, dryer and ironing board</span></li>
         </ul>
       </div>
     </section>
