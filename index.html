@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Coastal Hideaways | Santa Barbara Vacation Homes</title>
+<meta name="description" content="Coastal Hideaways offers Santa Barbara vacation homes, furnished rentals, private estates, accommodations, and guest services." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#07111C;
+    --ink-soft:#344A5B;
+    --navy:#07111C;
+    --ocean:#0B80AA;
+    --ocean-2:#1599C5;
+    --pine:#0D526B;
+    --gold:#7FAFC1;
+    --gold-deep:#465C6B;
+    --cta-white:#F7FBFD;
+    --paper:#FFFCF7;
+    --mist:#EEF7FA;
+    --white:#FFFFFF;
+    --line:#CCE0EA;
+    --max:1200px;
+    --gut:clamp(1.1rem,4vw,3rem);
+    --r:8px;
+    --shadow:0 26px 70px -42px rgba(4,42,68,.5);
+    --ease:cubic-bezier(.22,.61,.36,1);
+    --font-body:"Montserrat",Arial,sans-serif;
+    --font-ui:"Montserrat",Arial,sans-serif;
+    --font-brand:"Great Vibes",cursive;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:104px}
+  body{
+    font-family:var(--font-body);
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.55;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{width:min(100% - (var(--gut) * 2),var(--max));margin-inline:auto}
+  .script{font-family:var(--font-brand);font-weight:400;letter-spacing:0;text-transform:none}
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:.7rem;
+    font-family:var(--font-ui);
+    font-size:.66rem;
+    font-weight:800;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+  }
+  .eyebrow::before{content:"";width:30px;height:1px;background:currentColor}
+  h1,h2,h3,h4{
+    font-family:var(--font-body);
+    font-weight:700;
+    letter-spacing:0;
+    line-height:1.08;
+  }
+  p{font-size:1.06rem;color:var(--ink-soft)}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.55rem;
+    min-height:46px;
+    padding:.82rem 1.1rem;
+    border:1px solid transparent;
+    border-radius:4px;
+    font-family:var(--font-ui);
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    transition:transform .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease),color .25s var(--ease);
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn svg{width:16px;height:16px}
+  .btn-ocean{background:var(--ocean);color:#fff}
+  .btn-ocean:hover{background:var(--navy)}
+  .btn-gold{
+    background:var(--cta-white);
+    border-color:rgba(255,255,255,.72);
+    color:var(--navy);
+    box-shadow:0 18px 36px -30px rgba(7,17,28,.46);
+  }
+  .btn-gold:hover{background:#fff;color:var(--navy)}
+  .btn-light{background:#fff;color:var(--navy)}
+  .btn-light:hover{background:var(--paper)}
+  .btn-outline{border-color:rgba(255,255,255,.68);color:#fff}
+  .btn-outline:hover{background:#fff;color:var(--navy)}
+
+  .site-header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:50;
+    color:#fff;
+    background:transparent;
+    border-bottom:1px solid transparent;
+    transition:background .3s var(--ease),border-color .3s var(--ease),box-shadow .3s var(--ease),color .3s var(--ease);
+  }
+  .site-header::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:-1;
+    pointer-events:none;
+    background:linear-gradient(180deg,rgba(7,17,28,.5),rgba(7,17,28,.18) 64%,rgba(7,17,28,0));
+    transition:opacity .3s var(--ease);
+  }
+  .site-header.is-scrolled{
+    color:var(--navy);
+    background:rgba(255,255,255,.9);
+    border-bottom-color:rgba(204,224,234,.9);
+    box-shadow:0 16px 36px -30px rgba(7,17,28,.48);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+  }
+  .site-header.is-scrolled::before{
+    opacity:0;
+  }
+  .site-header .wrap{
+    min-height:90px;
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    gap:1.1rem;
+  }
+  .nav-group{
+    display:flex;
+    align-items:center;
+    gap:.9rem;
+    font-family:var(--font-ui);
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+  }
+  .nav-group:last-child{justify-content:flex-end}
+  .nav-group a{
+    color:rgba(255,255,255,.9);
+    text-shadow:0 3px 14px rgba(2,23,38,.72);
+    transition:color .25s var(--ease),background .25s var(--ease),text-shadow .25s var(--ease);
+  }
+  .nav-group a:hover{color:#fff}
+  .nav-group a.nav-phone{
+    padding:.55rem .72rem;
+    border-radius:4px;
+    background:var(--cta-white);
+    border:1px solid rgba(255,255,255,.62);
+    color:var(--navy);
+    white-space:nowrap;
+    text-shadow:none;
+    box-shadow:0 14px 30px -26px rgba(7,17,28,.5);
+  }
+  .nav-group a.nav-phone:hover{background:#fff;color:var(--navy)}
+  .site-header.is-scrolled .nav-group a{
+    color:rgba(7,17,28,.76);
+    text-shadow:none;
+  }
+  .site-header.is-scrolled .nav-group a:hover{color:var(--navy)}
+  .site-header.is-scrolled .nav-group a.nav-phone{
+    background:#fff;
+    border-color:var(--line);
+    color:var(--navy);
+  }
+  .brand{
+    text-align:center;
+    line-height:1;
+    color:#fff;
+    text-shadow:0 4px 18px rgba(2,23,38,.5);
+  }
+  .brand b{
+    display:block;
+    font-family:var(--font-brand);
+    font-size:clamp(1.95rem,2.7vw,2.55rem);
+    font-weight:400;
+    letter-spacing:0;
+    text-transform:none;
+    text-shadow:inherit;
+  }
+  .brand b span{
+    font:inherit;
+    margin-left:.08em;
+    letter-spacing:0;
+    text-transform:none;
+    color:#fff;
+  }
+  .brand small{
+    display:block;
+    margin-top:.42rem;
+    font-family:var(--font-ui);
+    font-size:.62rem;
+    font-weight:600;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.78);
+  }
+  .site-header.is-scrolled .brand{
+    color:var(--navy);
+    text-shadow:none;
+  }
+  .site-header.is-scrolled .brand b span{color:var(--navy)}
+  .site-header.is-scrolled .brand small{color:rgba(7,17,28,.62)}
+
+  .hero{
+    position:relative;
+    min-height:92svh;
+    display:flex;
+    align-items:flex-end;
+    color:#fff;
+    background:
+      radial-gradient(circle at 76% 18%,rgba(255,255,255,.12),rgba(255,255,255,0) 28%),
+      linear-gradient(180deg,rgba(7,17,28,.12),rgba(7,17,28,.2) 44%,rgba(7,17,28,.48)),
+      linear-gradient(90deg,rgba(7,17,28,.5),rgba(7,17,28,.18) 48%,rgba(7,17,28,.06)),
+      url("images/marketing-coastline.webp") center 46%/cover no-repeat;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    background:
+      linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,0) 36%),
+      linear-gradient(90deg,rgba(255,255,255,.045),rgba(11,128,170,.06) 54%,rgba(255,255,255,0));
+  }
+  .bird-flock{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    overflow:hidden;
+    pointer-events:none;
+  }
+  .bird{
+    position:absolute;
+    left:var(--start-x,0);
+    top:var(--start-y,58%);
+    width:33px;
+    height:15px;
+    opacity:var(--o,.42);
+    transform:scale(var(--s,1)) rotate(var(--r,0deg));
+    animation:birdToHorizon var(--d,30s) var(--ease) infinite;
+    animation-delay:var(--delay,0s);
+    will-change:transform,translate,opacity;
+  }
+  .bird::before,.bird::after{
+    content:"";
+    position:absolute;
+    top:5px;
+    width:18px;
+    height:11px;
+    border-top:2.4px solid rgba(4,32,44,.88);
+    border-radius:50% 50% 0 0;
+  }
+  .bird span{
+    position:absolute;
+    left:14px;
+    top:6px;
+    width:5px;
+    height:3px;
+    border-radius:50%;
+    background:rgba(4,32,44,.88);
+    box-shadow:4px .2px 0 -1.3px rgba(4,32,44,.88);
+  }
+  .bird::before{left:0;transform-origin:100% 50%;animation:wingLeft var(--wing,1.5s) ease-in-out infinite}
+  .bird::after{right:0;transform-origin:0 50%;animation:wingRight var(--wing,1.5s) ease-in-out infinite}
+  .bird:nth-child(1){--start-x:8vw;--start-y:62%;--to-x:48vw;--to-y:-31vh;--s:.96;--r:-7deg;--o:.46;--d:31s;--delay:-5s;--wing:1.35s}
+  .bird:nth-child(2){--start-x:24vw;--start-y:56%;--to-x:31vw;--to-y:-25vh;--s:.72;--r:-2deg;--o:.36;--d:36s;--delay:-18s;--wing:1.1s}
+  .bird:nth-child(3){--start-x:78vw;--start-y:64%;--to-x:-22vw;--to-y:-34vh;--s:1.08;--r:8deg;--o:.5;--d:30s;--delay:-11s;--wing:1.25s}
+  .bird:nth-child(4){--start-x:64vw;--start-y:53%;--to-x:-8vw;--to-y:-22vh;--s:.68;--r:5deg;--o:.34;--d:39s;--delay:-27s;--wing:1.65s}
+  .bird:nth-child(5){--start-x:-4vw;--start-y:68%;--to-x:62vw;--to-y:-38vh;--s:.84;--r:-5deg;--o:.38;--d:34s;--delay:-2s;--wing:1.15s}
+  .bird:nth-child(6){--start-x:42vw;--start-y:61%;--to-x:14vw;--to-y:-31vh;--s:.92;--r:3deg;--o:.4;--d:33s;--delay:-22s;--wing:1.5s}
+  .bird:nth-child(7){--start-x:88vw;--start-y:58%;--to-x:-31vw;--to-y:-27vh;--s:.7;--r:9deg;--o:.34;--d:42s;--delay:-32s;--wing:1.3s}
+  .bird:nth-child(8){--start-x:15vw;--start-y:72%;--to-x:45vw;--to-y:-43vh;--s:1.14;--r:-6deg;--o:.44;--d:29s;--delay:-14s;--wing:1.05s}
+  @keyframes birdToHorizon{
+    0%{opacity:0;translate:0 0;transform:scale(var(--s,1)) rotate(var(--r,0deg))}
+    8%{opacity:var(--o,.42)}
+    62%{opacity:var(--o,.42)}
+    86%{opacity:.16}
+    100%{opacity:0;translate:var(--to-x,40vw) var(--to-y,-30vh);transform:scale(.12) rotate(var(--r,0deg))}
+  }
+  @keyframes wingLeft{
+    0%,100%{transform:rotate(32deg)}
+    45%{transform:rotate(-8deg)}
+    70%{transform:rotate(42deg)}
+  }
+  @keyframes wingRight{
+    0%,100%{transform:rotate(-32deg)}
+    45%{transform:rotate(8deg)}
+    70%{transform:rotate(-42deg)}
+  }
+  .hero-content{
+    width:100%;
+    padding:10.5rem 0 7.4rem;
+    position:relative;
+    z-index:2;
+  }
+  .hero-text{max-width:650px}
+  .hero .eyebrow,
+  .feature .eyebrow{
+    color:#fff;
+    text-shadow:0 3px 14px rgba(2,23,38,.78);
+  }
+  .hero h1{
+    margin:.72rem 0 1rem;
+    font-family:var(--font-brand);
+    font-weight:400;
+    font-size:clamp(3.1rem,6vw,5.75rem);
+    max-width:12.5ch;
+    text-transform:none;
+    line-height:.92;
+    text-shadow:0 10px 38px rgba(2,23,38,.72),0 2px 6px rgba(2,23,38,.55);
+  }
+  .hero h1 .script{
+    display:block;
+    margin-top:.7rem;
+    color:var(--gold);
+    font-family:var(--font-body);
+    font-size:clamp(1.35rem,2.5vw,2.25rem);
+    font-weight:600;
+    line-height:1.12;
+    letter-spacing:.02em;
+  }
+  .intro-copy h2 .script,
+  .section-head h2 .script,
+  .feature h2 .script,
+  .contact h2 .script{
+    font-family:var(--font-body);
+    font-weight:500;
+    color:var(--gold-deep);
+  }
+  .hero p{
+    max-width:520px;
+    color:rgba(255,255,255,.92);
+    font-size:1.08rem;
+    font-weight:500;
+    text-shadow:0 3px 16px rgba(2,23,38,.72);
+  }
+  .hero-actions{
+    display:flex;
+    gap:.8rem;
+    flex-wrap:wrap;
+    margin-top:1.8rem;
+  }
+
+  .booking-wrap{
+    position:relative;
+    z-index:4;
+    margin-top:-54px;
+  }
+  .booking-bar{
+    display:grid;
+    grid-template-columns:repeat(4,1fr) auto;
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+  }
+  .booking-field{
+    min-height:108px;
+    background:#fff;
+    padding:1.05rem;
+  }
+  .booking-field label{
+    display:block;
+    margin-bottom:.45rem;
+    font-family:var(--font-ui);
+    font-size:.62rem;
+    font-weight:800;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+  }
+  .booking-field input,.booking-field select{
+    width:100%;
+    border:0;
+    outline:0;
+    background:transparent;
+    color:var(--ink);
+    font:700 1.06rem var(--font-body);
+  }
+  .booking-submit{
+    min-width:180px;
+    border-radius:0;
+    min-height:108px;
+  }
+
+  section{position:relative}
+  .pad{padding:clamp(4.5rem,8vw,7rem) 0}
+  .section-head{
+    max-width:760px;
+    margin-bottom:2.4rem;
+  }
+  .section-head.center{text-align:center;margin-inline:auto}
+  .section-head.center .eyebrow{justify-content:center}
+  .section-head h2{
+    margin:.85rem 0 .8rem;
+    font-size:clamp(2rem,3.8vw,3.25rem);
+    text-transform:none;
+  }
+  .section-head h2 .script{
+    display:block;
+    color:var(--gold-deep);
+    font-size:.78em;
+    line-height:1.12;
+  }
+  .reveal{
+    --reveal-x:0px;
+    --reveal-y:64px;
+    --reveal-scale:.98;
+    opacity:0;
+    filter:blur(8px);
+    transform:translate3d(var(--reveal-x),var(--reveal-y),0) scale(var(--reveal-scale));
+    transition:opacity 1s var(--ease),transform 1s var(--ease),filter 1s var(--ease);
+    transition-delay:var(--delay,0s);
+    will-change:opacity,transform,filter;
+  }
+  .reveal.in{
+    opacity:1;
+    filter:none;
+    transform:none;
+  }
+  .hero .reveal{
+    opacity:1;
+    filter:none;
+    transform:none;
+  }
+  .portrait.reveal{--reveal-x:-52px;--reveal-y:28px;--reveal-scale:.985}
+  .intro-copy.reveal{--reveal-x:52px;--reveal-y:28px;--reveal-scale:.985}
+  .stay-card.reveal,
+  .activity-card.reveal,
+  .contact-panel.reveal,
+  .quote-panel.reveal{--reveal-y:82px;--reveal-scale:.965}
+  .service-list.reveal,
+  .comfort-list.reveal{--reveal-y:58px;--reveal-scale:.98}
+
+  .intro{
+    background:linear-gradient(180deg,#fff 0%,var(--paper) 100%);
+  }
+  .intro-grid{
+    display:grid;
+    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+    gap:clamp(2rem,6vw,5rem);
+    align-items:center;
+  }
+  .portrait{
+    position:relative;
+    min-height:560px;
+    border-radius:var(--r);
+    overflow:hidden;
+    background:
+      linear-gradient(180deg,rgba(255,255,255,.06),rgba(4,42,68,.14)),
+      url("images/marketing-mountain-lake.webp") center/cover no-repeat;
+    box-shadow:var(--shadow);
+  }
+  .portrait::after{
+    content:"22 years";
+    position:absolute;
+    left:1.2rem;
+    bottom:1.2rem;
+    padding:.68rem .85rem;
+    border-radius:4px;
+    background:rgba(255,255,255,.94);
+    color:var(--navy);
+    font:800 .68rem var(--font-ui);
+    letter-spacing:.12em;
+    text-transform:uppercase;
+  }
+  .intro-copy h2{
+    margin:.8rem 0 1rem;
+    font-size:clamp(2rem,3.5vw,3rem);
+    text-transform:none;
+  }
+  .intro-copy h2 .script{
+    display:block;
+    color:var(--gold-deep);
+    font-size:.78em;
+    line-height:1.12;
+  }
+  .intro-copy p{margin-bottom:1rem}
+  .intro-copy p strong{
+    color:var(--ink);
+    font-weight:800;
+  }
+  .trust-line{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1rem;
+    margin-top:1.7rem;
+  }
+  .trust-item{
+    padding-top:.85rem;
+    border-top:2px solid var(--gold);
+  }
+  .trust-item b{
+    display:block;
+    font:800 1.55rem var(--font-ui);
+    color:var(--ocean);
+  }
+  .trust-item span{
+    color:var(--ink-soft);
+    font:700 .62rem var(--font-ui);
+    letter-spacing:.1em;
+    text-transform:uppercase;
+  }
+  .trust-badges{
+    display:flex;
+    align-items:center;
+    gap:.85rem;
+    flex-wrap:wrap;
+    margin-top:1.2rem;
+  }
+  .trust-badge{
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    gap:.75rem;
+    padding:.72rem .9rem;
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    background:#fff;
+    box-shadow:0 16px 34px -30px rgba(7,17,28,.36);
+  }
+  .trust-badge img{
+    width:auto;
+    max-width:118px;
+    max-height:52px;
+    object-fit:contain;
+  }
+  .trust-badge.chamber img{max-width:54px;max-height:54px}
+  .trust-badge span{
+    max-width:14ch;
+    color:var(--ink);
+    font:700 .68rem var(--font-ui);
+    letter-spacing:.06em;
+    line-height:1.25;
+    text-transform:uppercase;
+  }
+
+  .stays{background:#fff}
+  .stay-grid{
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+    gap:1.2rem;
+  }
+  .stay-card{
+    min-height:480px;
+    position:relative;
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+    border-radius:var(--r);
+    color:#fff;
+    background:var(--navy);
+    box-shadow:0 22px 52px -38px rgba(4,42,68,.5);
+  }
+  .stay-card.small{min-height:230px}
+  .stay-stack{display:grid;gap:1.2rem}
+  .stay-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(7,17,28,.54));
+    z-index:1;
+  }
+  .stay-card.coast{background:url("images/marketing-coastline.webp") center/cover no-repeat}
+  .stay-card.mountain{background:url("images/marketing-mountain-lake.webp") center/cover no-repeat}
+  .stay-body{
+    position:relative;
+    z-index:2;
+    padding:1.4rem;
+    max-width:520px;
+  }
+  .stay-body .tag{
+    display:inline-flex;
+    margin-bottom:.65rem;
+    padding:.3rem .48rem;
+    border-radius:4px;
+    background:rgba(255,255,255,.92);
+    color:var(--navy);
+    font:800 .6rem var(--font-ui);
+    letter-spacing:.11em;
+    text-transform:uppercase;
+  }
+  .stay-body h3{
+    margin-bottom:.5rem;
+    font-size:clamp(1.45rem,2.6vw,2.25rem);
+    text-transform:none;
+    text-shadow:0 4px 18px rgba(2,23,38,.52);
+  }
+  .stay-body p{color:rgba(255,255,255,.9);max-width:42ch;text-shadow:0 3px 14px rgba(2,23,38,.58)}
+
+  .experience{
+    background:var(--paper);
+  }
+  .activity-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    overflow:hidden;
+  }
+  .activity-card{
+    min-height:360px;
+    padding:0;
+    background:#fff;
+  }
+  .activity-photo{
+    position:relative;
+    aspect-ratio:16/10;
+    overflow:hidden;
+    background:var(--navy);
+  }
+  .activity-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:saturate(1.05) contrast(1.02) brightness(1.04) sepia(.05) hue-rotate(-4deg);
+    transition:transform .7s var(--ease),filter .7s var(--ease);
+  }
+  .activity-card:hover .activity-photo img{
+    transform:scale(1.05);
+    filter:saturate(1.1) contrast(1.04) brightness(1.06) sepia(.06) hue-rotate(-4deg);
+  }
+  .activity-icon{
+    position:absolute;
+    left:1rem;
+    bottom:1rem;
+    width:48px;
+    height:48px;
+    display:grid;
+    place-items:center;
+    border-radius:8px;
+    background:rgba(255,255,255,.92);
+    color:var(--ocean);
+    box-shadow:0 16px 32px -22px rgba(4,42,68,.6);
+  }
+  .activity-icon svg{width:25px;height:25px}
+  .activity-body{padding:1.35rem}
+  .activity-card .num{
+    display:block;
+    margin-bottom:.8rem;
+    color:var(--gold-deep);
+    font:800 .64rem var(--font-ui);
+    letter-spacing:.12em;
+  }
+  .activity-card h3{
+    margin-bottom:1rem;
+    font-size:1.32rem;
+    line-height:1.12;
+    text-transform:none;
+  }
+  .activity-card ul{
+    display:grid;
+    gap:.6rem;
+    list-style:none;
+    color:var(--ink-soft);
+    font-size:1.02rem;
+  }
+  .activity-card li{
+    padding-left:1rem;
+    position:relative;
+  }
+  .activity-card li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:.68em;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:var(--gold);
+  }
+
+  .amenities{
+    background:var(--mist);
+  }
+  .comfort-shell{
+    display:grid;
+    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+    gap:clamp(1.6rem,5vw,4rem);
+    align-items:start;
+  }
+  .comfort-list{
+    columns:2;
+    column-gap:2rem;
+    list-style:none;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    padding:1.4rem;
+    box-shadow:0 20px 46px -38px rgba(4,42,68,.48);
+  }
+  .comfort-list li{
+    break-inside:avoid;
+    padding:.58rem 0 .58rem 1.05rem;
+    border-bottom:1px solid rgba(216,226,222,.72);
+    color:var(--ink-soft);
+    position:relative;
+  }
+  .comfort-list li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:1.16rem;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:var(--ocean);
+  }
+  .service-note{
+    margin-top:1.4rem;
+    padding:1.1rem 1.2rem;
+    border-left:3px solid var(--gold);
+    background:#fff;
+    color:var(--ink);
+    font-weight:700;
+  }
+  .privacy-note{
+    margin-top:1rem;
+    color:var(--ink-soft);
+    font-size:1rem;
+  }
+
+  .feature{
+    color:#fff;
+    background:
+      radial-gradient(circle at 76% 16%,rgba(255,255,255,.1),rgba(255,255,255,0) 30%),
+      linear-gradient(90deg,rgba(7,17,28,.72),rgba(11,128,170,.28)),
+      url("images/marketing-coastline.webp") center 48%/cover fixed;
+  }
+  .feature-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 360px;
+    gap:clamp(2rem,6vw,5rem);
+    align-items:end;
+  }
+  .feature h2{
+    margin:.85rem 0 1rem;
+    max-width:760px;
+    font-size:clamp(2.05rem,4vw,3.35rem);
+    text-transform:none;
+    text-shadow:0 6px 24px rgba(2,23,38,.58);
+  }
+  .feature h2 .script{
+    display:block;
+    color:var(--gold);
+    font-size:.78em;
+    line-height:1.12;
+  }
+  .feature p{color:rgba(255,255,255,.9);max-width:620px;text-shadow:0 3px 14px rgba(2,23,38,.55)}
+  .service-list{
+    display:grid;
+    gap:.65rem;
+  }
+  .service-list a{
+    display:flex;
+    justify-content:space-between;
+    gap:1rem;
+    padding:.9rem 0;
+    border-bottom:1px solid rgba(255,255,255,.22);
+    font:700 .68rem var(--font-ui);
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,.88);
+  }
+  .service-list a:hover{color:#fff}
+
+  .contact{background:var(--paper)}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
+    gap:clamp(2rem,6vw,5rem);
+    align-items:start;
+  }
+  .contact-panel{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    padding:clamp(1.2rem,3vw,2rem);
+    box-shadow:0 22px 54px -42px rgba(4,42,68,.48);
+  }
+  .contact-panel h2{
+    margin:.8rem 0 1rem;
+    font-size:clamp(2rem,3.5vw,3rem);
+    text-transform:none;
+  }
+  .contact-panel h2 .script{
+    display:block;
+    color:var(--gold-deep);
+    font-size:.78em;
+    line-height:1.12;
+  }
+  .form-grid{display:grid;gap:.85rem;margin-top:1.2rem}
+  .field label{
+    display:block;
+    margin-bottom:.35rem;
+    color:var(--gold-deep);
+    font:700 .62rem var(--font-ui);
+    letter-spacing:.1em;
+    text-transform:uppercase;
+  }
+  .field input,.field textarea{
+    width:100%;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:#fff;
+    min-height:46px;
+    padding:.75rem .85rem;
+    font:500 1.02rem var(--font-body);
+    color:var(--ink);
+  }
+  .field textarea{min-height:132px;resize:vertical}
+  .quote-panel{
+    min-height:540px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:2rem;
+    border-radius:var(--r);
+    color:#fff;
+    background:
+      linear-gradient(180deg,rgba(255,255,255,.045),rgba(7,17,28,.5)),
+      url("images/marketing-mountain-lake.webp") center/cover no-repeat;
+    box-shadow:var(--shadow);
+  }
+  .quote-panel blockquote{
+    color:var(--gold);
+    font-family:var(--font-brand);
+    font-size:clamp(2.25rem,4vw,3.5rem);
+    line-height:.95;
+    text-shadow:0 5px 20px rgba(2,23,38,.56);
+  }
+  .quote-panel p{
+    max-width:36ch;
+    margin-top:1rem;
+    color:rgba(255,255,255,.86);
+    text-shadow:0 3px 14px rgba(2,23,38,.58);
+  }
+
+  footer{
+    background:var(--navy);
+    color:rgba(255,255,255,.76);
+    padding:3.2rem 0 1.4rem;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1.1fr;
+    gap:2rem;
+    padding-bottom:2.5rem;
+    border-bottom:1px solid rgba(255,255,255,.14);
+  }
+  .footer-brand b{
+    display:block;
+    color:#fff;
+    font:400 clamp(2.2rem,3.6vw,3rem)/.9 var(--font-brand);
+    letter-spacing:0;
+    text-transform:none;
+  }
+  .footer-brand b span{
+    margin-left:.08em;
+    color:#fff;
+  }
+  .footer-brand p{margin-top:1rem;color:rgba(255,255,255,.76);max-width:32ch}
+  footer h4{
+    margin-bottom:1rem;
+    color:var(--gold);
+    font-size:.72rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+  }
+  footer a,footer p{display:block;margin-bottom:.5rem;color:rgba(255,255,255,.76)}
+  footer a:hover{color:#fff}
+  .footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    gap:1rem;
+    flex-wrap:wrap;
+    padding-top:1.3rem;
+    font-size:.9rem;
+  }
+
+  @media(max-width:1040px){
+    .nav-group{display:none}
+    .site-header .wrap{grid-template-columns:1fr;min-height:82px}
+    .booking-bar{grid-template-columns:repeat(2,1fr)}
+    .booking-submit{grid-column:1/-1;min-height:54px}
+    .intro-grid,.stay-grid,.feature-grid,.contact-grid{grid-template-columns:1fr}
+    .stay-card,.stay-card.small{min-height:360px}
+    .activity-grid,.comfort-shell{grid-template-columns:1fr}
+    .comfort-list{columns:2}
+    .footer-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:640px){
+    html{scroll-padding-top:86px}
+    .site-header{top:0}
+    .hero{min-height:auto}
+    .hero-content{padding:8rem 0 6.5rem}
+    .hero h1{font-size:3rem;max-width:12.5ch}
+    .hero h1 .script{font-size:1.28rem}
+    .hero-actions .btn{width:100%}
+    .booking-wrap{margin-top:-42px}
+    .booking-bar{grid-template-columns:1fr}
+    .booking-field{min-height:88px}
+    .trust-line,.activity-grid,.footer-grid{grid-template-columns:1fr}
+    .comfort-list{columns:1}
+    .portrait,.quote-panel{min-height:380px}
+    .stay-card,.stay-card.small{min-height:310px}
+    .section-head.center{text-align:left}
+    .section-head.center .eyebrow{justify-content:flex-start}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .bird{animation:none!important;display:none}
+    .reveal{transition:opacity .7s var(--ease),transform .7s var(--ease),filter .7s var(--ease)}
+  }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav-group" aria-label="Primary left">
+        <a href="https://www.coastalhideaways.com/properties-list.html">Property Size &amp; Rates</a>
+        <a href="https://www.coastalhideaways.com/properties-list.html">Homes</a>
+        <a href="https://www.coastalhideaways.com/amenities.html">Amenities</a>
+        <a href="https://www.coastalhideaways.com/concierge.html">Concierge</a>
+      </nav>
+      <a class="brand" href="#top" aria-label="Coastal Hideaways home">
+        <b>Coastal <span>Hideaways</span></b>
+        <small>Serving Santa Barbara for 22 years</small>
+      </a>
+      <nav class="nav-group" aria-label="Primary right">
+        <a href="https://www.coastalhideaways.com/interior_design_services.html">Design</a>
+        <a href="https://www.coastalhideaways.com/testimonials.php">Reviews</a>
+        <a href="https://www.coastalhideaways.com/contact.html">Contact</a>
+        <a class="nav-phone" href="tel:+18059691995">(805) 969-1995</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="Santa Barbara vacation homes">
+      <div class="bird-flock" aria-hidden="true">
+        <span class="bird"><span></span></span>
+        <span class="bird"><span></span></span>
+        <span class="bird"><span></span></span>
+        <span class="bird"><span></span></span>
+        <span class="bird"><span></span></span>
+        <span class="bird"><span></span></span>
+        <span class="bird"><span></span></span>
+        <span class="bird"><span></span></span>
+      </div>
+      <div class="hero-content">
+        <div class="wrap">
+          <div class="hero-text">
+            <span class="eyebrow reveal">#1 Vacation Rental Company</span>
+            <h1 class="reveal" style="--delay:.08s">Santa Barbara Vacation Homes <span class="script">with a coastal soul</span></h1>
+            <p class="reveal" style="--delay:.16s">Coastal Hideaways caters to Santa Barbara vacation homes, estates, furnished rentals, accommodations, resorts, and all the details that make vacation time easier.</p>
+            <div class="hero-actions">
+              <a class="btn btn-ocean" href="https://www.rentalprorentals.com/coastalhideaways/search.cfm" target="_blank" rel="noopener">
+                Book Online
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a class="btn btn-outline" href="https://www.coastalhideaways.com/properties-list.html">Explore Homes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="booking-wrap" aria-label="Availability search">
+      <form class="wrap booking-bar" action="https://www.rentalprorentals.com/coastalhideaways/search.cfm" method="get">
+        <div class="booking-field">
+          <label for="arrival">Arrival</label>
+          <input id="arrival" name="startdate" type="date" />
+        </div>
+        <div class="booking-field">
+          <label for="departure">Departure</label>
+          <input id="departure" name="enddate" type="date" />
+        </div>
+        <div class="booking-field">
+          <label for="party">Guests</label>
+          <select id="party" name="occupancy">
+            <option>2 guests</option>
+            <option>4 guests</option>
+            <option>6 guests</option>
+            <option>8+ guests</option>
+          </select>
+        </div>
+        <div class="booking-field">
+          <label for="stay-type">Stay type</label>
+          <select id="stay-type" name="type">
+            <option>Vacation home</option>
+            <option>Furnished rental</option>
+            <option>Private estate</option>
+          </select>
+        </div>
+        <button class="btn btn-gold booking-submit" type="submit">Check Availability</button>
+      </form>
+    </div>
+
+    <section class="intro pad">
+      <div class="wrap intro-grid">
+        <div class="portrait reveal" role="img" aria-label="Mountain lake and evergreen landscape"></div>
+        <div class="intro-copy reveal" style="--delay:.1s">
+          <span class="eyebrow">Welcome to Coastal Hideaways</span>
+          <h2>At home in Santa Barbara <span class="script">for every season</span></h2>
+          <p><strong>Coastal Hideaways has been of service to the Santa Barbara community and surrounding areas for the past 22 years.</strong></p>
+          <p>The company is a member of the Santa Barbara Chamber of Commerce and the Better Business Bureau, and provides the best service that is humanly possible.</p>
+          <p>During your stay, you can enjoy Santa Barbara's perfect climate, local attractions, and a private place to relax after the day is done.</p>
+          <div class="trust-line">
+            <div class="trust-item"><b>22</b><span>Years of service</span></div>
+            <div class="trust-item"><b>#1</b><span>Santa Barbara area</span></div>
+            <div class="trust-item"><b>365</b><span>Available year-round</span></div>
+          </div>
+          <div class="trust-badges" aria-label="Memberships and ratings">
+            <div class="trust-badge">
+              <img src="images/bbb-a-plus.webp" alt="BBB A plus rating" loading="lazy" />
+              <span>Better Business Bureau</span>
+            </div>
+            <div class="trust-badge chamber">
+              <img src="images/sb-chamber-of-commerce.gif" alt="Santa Barbara Chamber of Commerce logo" loading="lazy" />
+              <span>Santa Barbara Chamber</span>
+            </div>
+          </div>
+          <p class="privacy-note">Your personal information is secure with Coastal Hideaways.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="stays pad" id="homes">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Private homes and furnished rentals</span>
+          <h2>A more refined way to stay <span class="script">by the coast</span></h2>
+          <p>Our Santa Barbara vacation estates are attractively furnished and available throughout the year for any given amount of time.</p>
+        </div>
+        <div class="stay-grid">
+          <article class="stay-card coast reveal">
+            <div class="stay-body">
+              <span class="tag">Coastal home</span>
+              <h3>Ocean-facing stays</h3>
+              <p>Bright homes and estates near the coastline, beaches, restaurants, and Santa Barbara's scenic routes.</p>
+            </div>
+          </article>
+          <div class="stay-stack">
+            <article class="stay-card mountain small reveal" style="--delay:.08s">
+              <div class="stay-body">
+                <span class="tag">Longer visits</span>
+                <h3>Furnished rentals</h3>
+                <p>Comfortable homes for extended stays without losing a sense of place.</p>
+              </div>
+            </article>
+            <article class="stay-card coast small reveal" style="--delay:.16s">
+              <div class="stay-body">
+                <span class="tag">Estate-style</span>
+                <h3>Private retreats</h3>
+                <p>Spaces for families, special trips, and quiet time after the day's activities.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience pad" id="experience">
+      <div class="wrap">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Things to experience</span>
+          <h2>Something for everyone <span class="script">in Santa Barbara</span></h2>
+          <p>There is something for everyone, from child to teenager, to adult. These are some of the fun things to experience in and around Santa Barbara.</p>
+        </div>
+        <div class="activity-grid">
+          <article class="activity-card reveal">
+            <div class="activity-photo">
+              <img src="images/experience-intellectuals.jpg" alt="Santa Barbara cultural courtyard and market details" loading="lazy" />
+              <span class="activity-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V8l8-4 8 4v11M4 19h16M8 19v-6h8v6M12 4v4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+            <div class="activity-body">
+              <span class="num">01</span>
+              <h3>For The Intellectuals</h3>
+              <ul>
+                <li>The Santa Barbara Museum of Art</li>
+                <li>The Natural History Museum</li>
+                <li>Market Forays, educational</li>
+              </ul>
+            </div>
+          </article>
+          <article class="activity-card reveal" style="--delay:.08s">
+            <div class="activity-photo">
+              <img src="images/experience-nature.jpg" alt="Santa Barbara coastal wetlands trail and waterfall" loading="lazy" />
+              <span class="activity-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22c4-3 7-6 7-11a7 7 0 10-14 0c0 5 3 8 7 11z" stroke-linejoin="round"/><path d="M12 13c2-1 3-2.5 3-4.5M12 13c-2-1-3-2.5-3-4.5" stroke-linecap="round"/></svg>
+              </span>
+            </div>
+            <div class="activity-body">
+              <span class="num">02</span>
+              <h3>For The Nature Lovers</h3>
+              <ul>
+                <li>Andree Clark Bird Refuge</li>
+                <li>Ty Warner Sea Center on Stearns Wharf</li>
+                <li>Seven Falls, natural spring, waterfall and hike</li>
+              </ul>
+            </div>
+          </article>
+          <article class="activity-card reveal" style="--delay:.16s">
+            <div class="activity-photo">
+              <img src="images/experience-sporty.jpg" alt="Golf, cycling and skydiving along the Santa Barbara coast" loading="lazy" />
+              <span class="activity-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="6" r="2.5"/><path d="M9.5 9l-2 4 3 2v5M14.5 9l2 3-3 1M5 21l3-5M19 14l-4 1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </div>
+            <div class="activity-body">
+              <span class="num">03</span>
+              <h3>For The Sporty Type</h3>
+              <ul>
+                <li>Golf</li>
+                <li>Skydiving</li>
+                <li>Cabrillo Bike Path, for cycling</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="amenities pad" id="amenities">
+      <div class="wrap comfort-shell">
+        <div class="section-head reveal">
+          <span class="eyebrow">For your comfort</span>
+          <h2>Attractively furnished <span class="script">and thoughtfully stocked</span></h2>
+          <p>We place no limits on your vacation time. To ensure your further enjoyment, each home includes a practical collection of guest comforts.</p>
+          <p class="service-note">Contact us for a complete list of amenities.</p>
+        </div>
+        <ul class="comfort-list reveal" style="--delay:.1s">
+          <li>Hairdryers</li>
+          <li>Towels</li>
+          <li>Bubble bath</li>
+          <li>Breakfast trays for breakfast in bed</li>
+          <li>Closet hangers</li>
+          <li>Alarm clocks</li>
+          <li>Bedroom robes</li>
+          <li>Cooking utensils, glassware and cutlery</li>
+          <li>Cooking spices</li>
+          <li>Microwave</li>
+          <li>Kettle</li>
+          <li>Toaster</li>
+          <li>Coffee grinder</li>
+          <li>Dish towels</li>
+          <li>Fireplace</li>
+          <li>Stereo, DVD, Cable TV</li>
+          <li>Private telephone line</li>
+          <li>Internet</li>
+          <li>Washer, dryer and ironing board</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="feature pad" id="concierge">
+      <div class="wrap feature-grid">
+        <div class="reveal">
+          <span class="eyebrow">The Coastal Hideaways difference</span>
+          <h2>Service beyond the keys <span class="script">and into the stay</span></h2>
+          <p>When you stay in our Santa Barbara vacation homes, we provide complimentary gardening service and a free beverage of your choice when you first arrive.</p>
+          <p>We also provide free airport and train station transportation within the boundaries of Santa Barbara, plus housekeeping, laundry, grocery shopping and child care services for a small additional fee.</p>
+        </div>
+        <nav class="service-list reveal" style="--delay:.12s" aria-label="Service links">
+          <a href="https://www.coastalhideaways.com/amenities.html"><span>Amenities</span><span>More</span></a>
+          <a href="https://www.coastalhideaways.com/concierge.html"><span>Concierge</span><span>More</span></a>
+          <a href="https://www.coastalhideaways.com/contact.html"><span>Questions</span><span>Contact</span></a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="contact pad" id="contact">
+      <div class="wrap contact-grid">
+        <form class="contact-panel reveal" action="mailto:vacations@coastalhideaways.com" method="post" enctype="text/plain">
+          <span class="eyebrow">Questions?</span>
+          <h2>Ask about your stay <span class="script">in Santa Barbara</span></h2>
+          <p>If you would like to know more about Santa Barbara vacation homes, Santa Barbara estates or vacations in Santa Barbara, contact Coastal Hideaways for further information or to make your booking.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="message">Question or comment</label>
+              <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+            <button class="btn btn-ocean" type="submit">Send Question</button>
+          </div>
+        </form>
+        <div class="quote-panel reveal" style="--delay:.12s">
+          <blockquote>You will never be disappointed.</blockquote>
+          <p>Spend your relaxation time in one of our private accommodations, nestled along the coastline.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <b>Coastal <span>Hideaways</span></b>
+          <p>Santa Barbara vacation homes, furnished rentals, accommodations, and guest services.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <a href="https://www.coastalhideaways.com/properties-list.html">Property Size &amp; Rates</a>
+          <a href="https://www.coastalhideaways.com/amenities.html">Amenities</a>
+          <a href="https://www.coastalhideaways.com/concierge.html">Concierge</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="https://www.coastalhideaways.com/testimonials.php">Testimonials</a>
+          <a href="https://www.coastalhideaways.com/interior_design_services.html">Interior Design</a>
+          <a href="https://www.coastalhideaways.com/contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="tel:+18059691995">(805) 969-1995</a>
+          <a href="mailto:vacations@coastalhideaways.com">vacations@coastalhideaways.com</a>
+          <p>Santa Barbara, California</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Copyright Coastal Hideaways.</span>
+        <span>Serving Santa Barbara and surrounding areas.</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const siteHeader = document.querySelector(".site-header");
+    function updateHeaderState() {
+      siteHeader.classList.toggle("is-scrolled", window.scrollY > 80);
+    }
+    updateHeaderState();
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+
+    const revealItems = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("in", entry.isIntersecting);
+        });
+      }, { threshold: 0.18, rootMargin: "0px 0px -10% 0px" });
+      revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add("in"));
+    }
+
+  </script>
+</body>
+</html>
